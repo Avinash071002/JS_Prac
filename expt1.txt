@@ -1,0 +1,21 @@
+function areaOfTriangle(triangleBase, triangleHeight)  {
+  return 0.5 * triangleBase * triangleHeight;
+}
+function areaOfRectangle(rectangleLength, rectangleBreadth)  {
+    return rectangleLength * rectangleBreadth;
+  }
+  function areaOfCircle(radius)  {
+    return Math.PI * radius * radius;
+  }
+
+
+  let triangleBase = 5;
+  let triangleHeight = 25;
+  console.log("Area of Triangle :  " + areaOfTriangle(triangleBase, triangleHeight) );
+
+  let rectangleLength = 20;
+  let rectangleBreadth = 10;
+  console.log("Area of Rectangle :  " + areaOfRectangle(rectangleLength, rectangleBreadth) );
+
+  let radius = 8;
+  console.log("Area of Circle :  " + areaOfCircle(radius) );

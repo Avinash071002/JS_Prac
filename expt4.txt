@@ -1,0 +1,30 @@
+function compareStrings(str1, str2) {
+  console.log("Using '==':", str1 == str2);
+  console.log("Using '===':", str1 === str2);
+
+  let comparison = str1.localeCompare(str2);
+  if (comparison === 0) {
+      console.log("Using localeCompare: The strings are equal.");
+  } else if (comparison < 0) {
+      console.log("Using localeCompare: String 1 comes before String 2.");
+  } else {
+      console.log("Using localeCompare: String 1 comes after String 2.");
+  }
+
+  const areAnagrams = (s1, s2) => {
+      const sortString = str => str.split('').sort().join('');
+      return sortString(s1) === sortString(s2);
+  };
+  console.log("Are the strings anagrams?", areAnagrams(str1, str2));
+
+  if (str1.length === str2.length) {
+      console.log("The strings have equal length.");
+  } else {
+      console.log("The strings have different lengths.");
+  }
+}
+
+let string1 = "listen";
+let string2 = "silent";
+console.log("Comparing two strings:", string1, "and", string2);
+compareStrings(string1, string2);

@@ -1,0 +1,18 @@
+//expt no 7
+
+let array  = [
+  {id:1, name:"Alice"},
+  {id:2, name:"BOb"}
+];
+function appendObjectToArray(arr, obj){
+  return arr;
+}
+function isArray(obj){
+  return Array.isArray(obj);
+
+}
+let newObject = {id:3, name:"Charlie"};
+appendObjectToArray(array, newObject);
+console.log("Array after appending object:", array);
+console.log("Is 'array' an array?", isArray(array));
+console.log("Is 'newObject' an array?", isArray(newObject));

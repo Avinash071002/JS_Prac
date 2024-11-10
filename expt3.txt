@@ -1,0 +1,18 @@
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+  function replaceCharacters(str,oldChar,newChar){
+    return str.split(oldChar).join(newChar);
+  }
+      function isPalindrome(str){
+        let reversedStr = str.split('').reverse().join('');
+        return str === reversedStr;
+      }
+
+      let originalString = "madam";
+      console.log("Original String: " +originalString);
+      console.log("Reversed String:" + reverseString(originalString));
+      let newString = replaceCharacters(originalString, 'a','o');
+      console.log("String after replacing 'a' with 'o' :" +newString);
+//3.Check if the string is a palindrome
+      console.log("Is the string a palindrome?" + isPalindrome(originalString));

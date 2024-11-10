@@ -1,0 +1,25 @@
+//expt no 6
+
+let array = [1,2,3,4,5,6,7,8,9];
+function removeElement(arr, element){
+  let index = arr.indexOf(element);
+  if(index !== -1){
+    arr.splice(index, 1);
+  }
+   return arr;
+}
+function containsElement(arr, element){
+  return arr.includes(element);
+}
+function emptyArray(arr){
+  arr.length = 0;
+}
+console.log("Original Array:" , array);
+removeElement(array,4);
+console.log("array after removing element 4:", array);
+
+let contains = containsElement(array,6);
+console.log("Does thee array contain 6?", contains);
+
+emptyArray(array);
+console.log("Array after emptying:", array);

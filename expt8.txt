@@ -1,0 +1,68 @@
+//EXPT NO 8
+//HTML CODE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to Our Homepage</h1>
+    <p>Hover over or focus on different elements to change the background color!</p>
+    
+    <div class="interactive-elements">
+        <button onmouseover="changeBackgroundColor('lightblue')" onmouseout="resetBackgroundColor()">Hover over me</button>
+        <input type="text" placeholder="Focus on me" onfocus="changeBackgroundColor('lightgreen')" onblur="resetBackgroundColor()">
+        <button onmouseover="changeBackgroundColor('lightcoral')" onmouseout="resetBackgroundColor()">Another hover button</button>
+    </div>
+
+    <script src="avinash.js"></script>
+</body>
+</html>
+
+//CSS CODE
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+.interactive-elements {
+    margin-top: 20px;
+}
+
+button, input[type="text"] {
+    font-size: 1em;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, input:focus {
+    outline: none;
+    border-color: #888;
+}
+
+//JS CODE
+function changeBackgroundColor(color) {
+  document.body.style.backgroundColor = color;
+}
+
+// Function to reset background color to default
+function resetBackgroundColor() {
+  document.body.style.backgroundColor = "#f0f0f0";
+}
